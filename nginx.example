@@ -1,0 +1,40 @@
+######################################## FLASK APPLICATION ###########################################
+
+server {
+    listen <your-port-redirect>;
+    server_name localhost <your-server-ip-address>;
+
+    location / {
+        proxy_pass http://127.0.0.1:<gunicorn listening port>/;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Host $host;
+        proxy_set_header X-Forwarded-Prefix /;
+    }
+} 
+
+############################### DJANGO-ADMIN APPLICATION ###########################################
+
+include /etc/nginx/mime.types;
+
+server {
+    listen <your-port-redirect>;
+    server_name <your-server-ip-address>;
+
+    location = /favicon.ico { 
+        access_log off; 
+        log_not_found off; 
+    }
+
+    location /static/ {
+        alias /var/www/django-admin/elevate/static/;
+        autoindex on;
+        autoindex_exact_size off;
+    }
+
+    location / {
+        proxy_pass http://127.0.0.1:<gunicorn listening port>;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
