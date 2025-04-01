@@ -10,20 +10,15 @@ Welcome to the admin + flask repository! This project aims to automate network t
 ![alt text](https://github.com/Richardbarbosasilva/flask-django-admin/blob/main/Previews/django-admin1.png)
 
 ## Main Flask Page
+![alt text](https://github.com/Richardbarbosasilva/flask-django-admin/blob/main/Previews/flask1.png)
 
+## Dashboards and Menus
+![alt text](https://github.com/Richardbarbosasilva/flask-django-admin/blob/main/Previews/preview2.gif)
 
+## User, group and permission management
+![alt text](https://github.com/Richardbarbosasilva/flask-django-admin/blob/main/Previews/preview1.gif)
 
-
-
-
-
-
-
-
-
-
-
-
+#######################################################################################################################
 
 ## 📌 Features
 
