@@ -5,7 +5,7 @@ Welcome to the admin + flask repository! This project aims to automate network t
 ## Previews
 
 ## Main Django Page
-![alt text](https://github.com/Richardbarbosasilva/flask-django-admin/blob/main/Previews/preview1.gif)
+![alt text](https://github.com/Richardbarbosasilva/flask-django-admin/blob/main/Previews/preview3.gif)
 
 ![alt text](https://github.com/Richardbarbosasilva/flask-django-admin/blob/main/Previews/django-admin1.png)
 
