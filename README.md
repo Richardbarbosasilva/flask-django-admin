@@ -21,7 +21,10 @@ Welcome to the admin + flask repository! This project aims to automate network t
 ## Flask HTTP error 403
 ![alt text](https://github.com/Richardbarbosasilva/flask-django-admin/blob/main/Previews/403.png)
 
-#######################################################################################################################
+## Flask config pages
+![alt text](https://github.com/Richardbarbosasilva/flask-django-admin/blob/main/Previews/flask2.png)
+
+
 
 ## 📌 Features
 
