@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    {% include 'includes/head.html' %}
+</head>
+
+<style> 
+    /* this block is a trivial config, will changed in future */
+    .dev {
+        height: 100vh;
+        
+    }
+    
+    .dev-border {
+        border-radius: .5rem;
+    }
+    
+    .dev-border-red {
+        border: 1px solid red;
+    }
+</style>
+
+<body>
+
+    <div class="dev d-flex justify-content-center align-items-center bg-light">
+
+        <div class="dev-border border border-primary shadow p-5 bg-white">
+
+            <h1 class="h3 text-center mb-4">Create Account</h1>
+            <form action="#" method="post" autocomplete="on">
+
+                <!-- username -->
+                <label>Your user</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    {{ form.username(class="form-control", placeholder="Your user") }}
+                </div>
+
+                <!-- password -->
+                <label class="bold">Your password</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    {{ form.password(class="form-control", placeholder="Your password") }}
+                </div>
+
+                <!-- confirm password -->
+                <label class="bold">Confirm password</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fas fa-unlock"></i>
+                        </div>
+                    </div>
+                    {{ form.confirm_password(class="form-control", placeholder="Confirm password") }}
+                </div>
+
+                <!-- checkbox -->
+                {{ form.checkbox(class="mb-4") }}
+                <p class="d-inline ml-1">I agree to the terms and conditions</p>
+
+                {{ form.submit(class="d-block btn btn-primary mb-4", style="width: 100%;") }}
+
+            </form>
+
+            <p class="text-center">Already have an account? <a href="{{ url_for('auth.login') }}">Login here</a></p>
+
+        </div>
+    </div>
+</body>
+
+
+{% include 'includes/scripts.html' %}
+
+</body>
+
+</html>
