@@ -61,3 +61,6 @@ urllib3==2.3.0
 webassets==2.0
 Werkzeug==3.0.4
 WTForms==3.2.1
+Django==5.1.7
+django-adminlte-3==0.1.6
+
