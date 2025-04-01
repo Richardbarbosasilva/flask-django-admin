@@ -1,80 +1,72 @@
 # Projeto Auto AdminLTE 3 Local
 
-Bem-vindo ao repositório do **Auto AdminLTE 3 Local**! Este projeto tem como objetivo automatizar tarefas de rede utilizando Flask, Flask-Migrate, Netmiko, PyEZ, ipaddress e outras bibliotecas.
+Welcome to the admin lte + flask repository! This project aims to automate network tasks using Flask, Flask-Migrate, Netmiko, PyEZ, ipaddress, and other libraries, combined with authentication and user management through the Django Admin interface and database.
 
-## 📌 Funcionalidades
-- Integração com dispositivos de rede via **NETCONF** e **RESTCONF**
-- Gerenciamento de VLANs e prefixos de rede
-- Criação automática de usuário administrador
-- Validação de endereços IP e prefixos
-- Flask com Flask-Migrate para gestão de banco de dados
-- Ambiente virtual gerenciado com Makefile
 
-## 🛠️ Tecnologias Utilizadas
-- **Python 3**
-- **Flask** (framework web)
-- **Flask-Migrate** (migração de banco de dados com SQLAlchemy)
-- **Netmiko / PyEZ** (conexão com equipamentos de rede)
-- **ipaddress** (manipulação de endereços IP)
-- **WTForms** (validação de formulários)
-- **Docker Compose** (opcional para conteinerização)
 
-## 🚀 Como Rodar o Projeto
 
-### 1️⃣ Clonar o Repositório
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 📌 Features
+
+- Network device integration with **NETCONF** e **RESTCONF**
+- Vlan management and network prefixs
+- Django-admin integration and authentication
+- IP Validation
+- Supports both Datacom and Juniper devices
+
+## 🚀 How to run the project (debian based distros)
+
+### 1️⃣ Clone the repository
 ```bash
-https://github.com/NocDevDatacenter/auto.AdminLTE 3.local.git
-cd auto-AdminLTE 3-local
+https://github.com/Richardbarbosasilva/flask-django-admin.git
 ```
 
-### 2️⃣ Criar o Ambiente Virtual
+### Create virtual enviroment
 ```bash
-make venv
+active virtual enviroment inside the project root:
+source venv/bin/activate
+
 ```
 
-### 3️⃣ Instalar as Dependências
+### Install dependencies
 ```bash
-make install
+pip install -r requirements.txt
 ```
 
-### 4️⃣ Configurar as Variáveis de Ambiente
-Crie um arquivo **.env** na raiz do projeto e defina suas credenciais:
-```ini
-ADMIN_USERNAME=admin
-ADMIN_PASSWORD=admin123
-DEVICE_TYPE=juniper
-HOSTNAME=192.168.1.1
-USERNAME=meu_usuario
-PASSWORD=minha_senha
-PORT=22
-```
-
-### 5️⃣ Rodar a Aplicação
+### Run application Flask (needs gunicorn and nginx successfully set)
 ```bash
-make run
-```
-Acesse **http://127.0.0.1:5000** no navegador.
-
-## 📂 Estrutura do Projeto
-```
-app/
-├── __init__.py
-├── models/
-├── controllers/
-├── static/
-├── templates/
-├── config.py
-├── create_admin.py
-└── sandbox.py
+Flask application run:
+gunicorn -w 4 run:app --bind 0.0.0.0:<your-port>
 ```
 
-## 🐍 Rodando Migrações do Banco de Dados
-Caso faça alterações no modelo de dados, execute:
+### Run application Flask (needs gunicorn and nginx successfully set)
 ```bash
-flask db migrate -m "atualizando tabelas"
-flask db upgrade
+Flask application run:
+gunicorn -w 4 run:app --bind 0.0.0.0:<your-port>
 ```
+### Run application Django (needs gunicorn and nginx successfully set)
+```bash
+Set virtual enviroment in another server instance just like the steps before
+Django application run:
+gunicorn -w 4 elevate.wsgi:application --bind 0.0.0.0:<your-port>
+```
+
+Access **http://<you-server-ip-address>** on browser.
+
 
 ## 📝 Licença
-Este projeto está sob a licença MIT. Sinta-se livre para usar e modificar! 🎉
+This project is under MIT Licence. Feel free to modify as you will! 🎉
 
