@@ -5,7 +5,7 @@ Welcome to the admin lte + flask repository! This project aims to automate netwo
 ## Previews
 
 ## Main Page
-![alt text](https://github.com/Richardbarbosasilva/flask-django-admin/Previews/django-admin1.png)
+![alt text](https://github.com/Richardbarbosasilva/flask-django-admin/blob/main/Previews/django-admin1.png)
 
 
 
