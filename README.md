@@ -1,11 +1,13 @@
-# Projeto Auto AdminLTE 3 Local
+# Project Flask And Django-admin
 
-Welcome to the admin lte + flask repository! This project aims to automate network tasks using Flask, Flask-Migrate, Netmiko, PyEZ, ipaddress, and other libraries, combined with authentication and user management through the Django Admin interface and database.
+Welcome to the admin + flask repository! This project aims to automate network tasks using Flask, Flask-Migrate, Netmiko, PyEZ, ipaddress, and other libraries, combined with authentication and user management through the Django Admin interface and database.
 
 ## Previews
 
-## Main Page
+## Main Django Page
 ![alt text](https://github.com/Richardbarbosasilva/flask-django-admin/blob/main/Previews/django-admin1.png)
+
+## Main Flask Page
 
 
 
