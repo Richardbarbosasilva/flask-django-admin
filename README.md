@@ -52,7 +52,7 @@ Flask application run:
 gunicorn -w 4 run:app --bind 0.0.0.0:<your-port>
 ```
 
-### Run application Flask (needs gunicorn and nginx successfully set)
+### Run application Django-Admin (needs gunicorn and nginx successfully set)
 ```bash
 Flask application run:
 gunicorn -w 4 run:app --bind 0.0.0.0:<your-port>
